@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/amitbhandari/Desktop/DSA/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+598327821.index
+2610059226.index
+1246437309.index
+2493130805.index
+385776990.index
+3013303523.index

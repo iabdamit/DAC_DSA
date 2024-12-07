@@ -1,0 +1,47 @@
+package cdac.in;
+
+import java.util.*;
+
+public class DirectChaining {
+    LinkedList<String>[] hashTable;
+    int maxChainSize = 5;
+
+    // ! constructor
+    public DirectChaining(int size) {
+        hashTable = new LinkedList[size];
+    }
+
+    // ! Hashing
+    public int modASCIIHashFunction(String word, int cellNumber) {
+        char ch[];
+        ch = word.toCharArray();
+        int i, sum;
+        for (i = 0, sum = 0; i < word.length(); i++) {
+            sum = sum + ch[i];
+        }
+        return sum % cellNumber;
+    }
+
+    // ! insert Function
+    public void insertValue(String word) {
+        int hashValue = modASCIIHashFunction(word, hashTable.length);
+        if (hashTable[hashValue] == null) {
+            hashTable[hashValue] = new LinkedList<String>();
+            hashTable[hashValue].add(word);
+        } else {
+            hashTable[hashValue].add(word);
+        }
+    }
+
+    // ! display all the keys
+    public void displayHashTable() {
+        if (hashTable == null) {
+            System.out.println("\n Hash table does not exist");
+        } else {
+            System.out.println("\n ********** Hash Table *******");
+            for (int i = 0; i < hashTable.length; i++) {
+                System.out.println("Index " + i + " Key " + hashTable[i]);
+            }
+        }
+    }
+}

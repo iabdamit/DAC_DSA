@@ -1,0 +1,26 @@
+package cdac.in;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // Create a hash table with an initial size of 5
+        LinearProbing lp = new LinearProbing(5);
+
+        // Insert some data into the hash table
+        linearProbing.insertData("Java");
+        linearProbing.insertData("Python");
+        linearProbing.insertData("C++");
+        linearProbing.insertData("JavaScript");
+
+        // Display the load factor
+        System.out.println("Load Factor: " + linearProbing.getLoadFactor());
+
+        // Insert more data to trigger rehashing
+        linearProbing.insertData("Ruby");
+        linearProbing.insertData("C#");
+        linearProbing.insertData("Go");
+
+        // Display the load factor after rehashing
+        System.out.println("Load Factor after rehashing: " + linearProbing.getLoadFactor());
+    }
+}
